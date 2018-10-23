@@ -34,6 +34,17 @@ scrape_configs:
     static_configs:
       - targets: ['pushgateway:9091']
 
+  - job_name: 'traefik'
+#    basic_auth:
+#      username: test
+#      password: test
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+#    scheme: https
+    honor_labels: true
+    static_configs:
+      - targets: ['IP:8080']
+
 
 alerting:
   alertmanagers:
