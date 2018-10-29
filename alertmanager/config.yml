@@ -1,11 +1,26 @@
+global:
+    smtp_from: ''
+    smtp_smarthost: ''
+    smtp_auth_username: ''
+    smtp_auth_identity: ''
+    smtp_auth_password: ''
+    smtp_require_tls: true
+
 route:
-    receiver: 'slack'
+    receiver: 'alerter'
+    group_wait: 10s
+    group_interval: 20s
 
 receivers:
-    - name: 'slack'
+    - name: 'alerter'
       slack_configs:
           - send_resolved: true
             text: "{{ .CommonAnnotations.description }}"
             username: 'Prometheus'
-            channel: '#<channel-name>'
-            api_url: 'https://hooks.slack.com/services/<webhook-id>'
+            channel: '#jirachannel'
+            api_url: 'https://hooks.slack.com/services/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'
+      email_configs:
+          - send_resolved: true
+            text: "{{ .CommonAnnotations.description }}"
+            to: 'success@simulator.amazonses.com'
+            
