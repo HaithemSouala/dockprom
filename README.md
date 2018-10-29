@@ -29,7 +29,6 @@ Containers:
 * Grafana (visualize metrics) `http://<host-ip>:3000`
 * NodeExporter (host metrics collector)
 * cAdvisor (containers metrics collector)
-* Caddy (reverse proxy and basic auth provider for prometheus and alertmanager)
 
 ## Setup Grafana
 
