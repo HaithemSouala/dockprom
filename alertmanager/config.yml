@@ -18,7 +18,7 @@ receivers:
             text: "{{ .CommonAnnotations.description }}"
             username: 'Prometheus'
             channel: '#jirachannel'
-            api_url: 'https://hooks.slack.com/services/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'
+            api_url: 'https://hooks.slack.com/services/XXXX/XXXXXXXX/XXXXXXXXX'
       email_configs:
           - send_resolved: true
             text: "{{ .CommonAnnotations.description }}"
